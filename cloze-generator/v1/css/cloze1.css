@@ -1,0 +1,43 @@
+/* @override http://lab/cloze-generator/v1/css/cloze1.css?v=1 */
+/*------------------------------------------*/
+/* USER STYLES */
+/*------------------------------------------*/
+#container {
+		width: 900px;
+}
+#input {
+		height: 150px;
+		width: 870px;
+		font: .85em/1.3em Georgia, "Times New Roman", Times, serif;
+	}
+#result, #keywords {
+		float:left;
+		border-top: 3px solid #bfbfbf;
+		padding-top: 20px;
+	}
+#result {
+		width: 65%;
+		margin-right: 5%;
+}
+#input, #result div, #keywords div {
+		border: 1px solid #bfbfbf;
+		margin: 10px 0 20px;
+		min-height: 40px;
+		padding: 15px;
+}
+#result div, #keywords div {
+		background-color: #fff;
+	}
+#keywords {
+		width: 30%;
+}
+#result_content span:hover,#keyword_content span:hover {
+		color: black;
+		background-color: #c7c7c7;
+		cursor: pointer;
+}
+footer { 
+		text-align: center;
+		margin-top: 30px;
+		font-size: 0.8em;
+	}

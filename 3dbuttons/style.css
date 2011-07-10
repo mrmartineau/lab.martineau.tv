@@ -1,0 +1,87 @@
+/* Eric Meyer's Reset Reloaded *//* http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/ */html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}/* remember to define focus styles! */:focus {outline: 0;}/* remember to highlight inserts somehow! */ins {text-decoration: none;}del {text-decoration: line-through;}/* tables still need 'cellspacing="0"' in the markup */table {border-collapse: collapse;border-spacing: 0;}
+body { 
+		padding: 150px; 
+}
+a.but,input,div { 
+		font-size: 17px;
+		font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; 
+		font-weight: bold; 
+}
+/**{
+	-webkit-transition: all .1s ease-out;
+}*/
+div { 
+		padding: 13px 13px; 
+		background:rgb(232,232,232) -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.03, rgb(212,208,212)),
+			color-stop(0.76, rgb(232,232,232))
+		);
+		border-radius: 180px 40px 40px 180px;
+		border: 1px solid #a5a5a5;
+-webkit-box-shadow: 0 3px 0 #ccc;
+-webkit-background-clip: padding; 
+		display:inline-block;
+}
+/*div:before {
+-webkit-box-shadow: -20px 3px 1px #bebebe; 
+		width: 20px; 
+		height: 100px; 
+		position: relative; 
+		display: block; 
+		background-color: #c3591e;
+}*/
+a.but { 
+		padding: 9px 20px;
+		color: #4c4c4c;
+		text-decoration: none; 
+		border-radius: 5px;
+		border: 1px solid #656565;
+-webkit-box-shadow: 0 3px 0 #656565; 
+		text-shadow: #f1f1f1 0 1px 1px; 
+		position: relative;
+		background: #858585 -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.03, rgb(133,133,133)),
+			color-stop(0.76, rgb(181,181,181))
+		);
+-webkit-background-clip: padding; 
+		top: -1px;
+}
+a.but:after { 
+		height: 59px; 
+		width: 33px; 
+		display: block; 
+		background-color: #da4c3e; 
+		position: absolute;
+}
+a.but:hover { 
+-webkit-box-shadow: 0 2px 0 #656565;
+		position: relative; 
+		top: 0;
+}
+a.but:active { 
+-webkit-box-shadow: 0 1px 0 #656565; 
+		position: relative; 
+		top: 1px;
+}
+input { 
+		padding: 13px 7px 8px;
+		border-radius: 40px;
+		background: rgba(255,255,255,0.9);
+		border: 1px solid #a5a5a5;
+-webkit-box-shadow: inset 0 3px 0 #ddd; 
+		margin: 0 12px 0 0;
+		color: #bebebe;
+		text-shadow: #f1f1f1 0 -1px 1px;
+-webkit-background-clip: padding;
+-webkit-appearance:none;
+}
+input:focus {
+	border-color:#777;
+	color: #757575;
+}

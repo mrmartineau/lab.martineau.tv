@@ -1,0 +1,93 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Dribbble Browser</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style.css?v=1">
+	<link rel="stylesheet" href="css/dribbble.css?v=2">
+	<script src="js/libs/modernizr-1.7.min.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<div id="logo">Lab</div>
+		<div id="page_info">
+			<h1>Dribbble wall</h1>
+		</div>
+		<nav id="main">
+			<ul class="group">
+				<li><a href="../card/" title="Card Experiment">CSS3 Card</a></li>
+				<li><a href="../mediaplayer/" title="HTML5 Mediaplayer">HTML5 Mediaplayer</a></li>
+				<li><a href="../cloze-generator/v1/" title="Cloze Test Generator">Cloze Test Generator</a></li>
+				<li><a href="../css-icons/" title="CSS Icons">CSS Icons</a></li>
+				<li><a href="../dribbble/" title="Dribbble Wall" class="current">Dribbble Wall</a></li>
+			</ul>
+		</nav>
+		<div id="social">
+			<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="MrMartineau">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;">Bookmark on Delicious</a>
+		</div>
+	</header>
+	<!-- !#container -->
+	<div id="container" role="main" class="group">
+
+		<h1><a href="#popular" title="Popular" class="choose">Popular</a> | <a href="#everyone" title="Everyone" class="choose">Everyone</a> | <a href="#debuts" title="Debuts" class="choose">Debuts</a></h1>
+		<!-- !User Choice -->
+		<div id="user_choice" class="group">
+			<input type="text" placeholder="Dribbble user" value="MrMartineau" id="username">
+			<div>
+				<a href="#" id="dribbbles"><span class="user">MrMartineau</span>'s Shots</a><br />
+				<a href="#" id="following">User's Shots Followed by <span class="user">MrMartineau</span></a><br />
+				<a href="#" id="likes" ><span class="user">MrMartineau</span>'s Liked Shots</a>
+			</div>
+
+		</div>
+		<!-- !Paging Nav -->
+		<div id="dribbble_nav">
+			<a href="#" id="prev_page" title="Previous Page" class="paging"><span></span></a><a href="#" id="layout_choice" class="grid active"></a><a href="#" id="next_page" title="Next Page" class="paging"><span></span></a>
+		</div>
+		<div id="dribbble" class="group">
+			<ul id="shots" class="group grid">
+				<li data-template="shots" style="display:none;">
+					<a href="{{url}}" class="shot">
+						<span class="likes_count">{{likes_count}}</span>
+						<img src="{{image_url}}" width="200"/>
+					</a>
+					<div class="more_info">
+						<a href="{{url}}" class="shot2">
+							<span class="likes_count">{{likes_count}}</span>
+							<img src="{{image_url}}" width="200"/>
+						</a>
+						<h2><a href="{{url}}">{{title}}</a></h2>
+						<h3>by <a href="{{player.url}}">{{player.name}}</a></h3>
+						<p>Created at {{created_at}}</p>
+					</div>
+				</li>
+				<li data-template-fallback>Sorry, JavaScript required!</li>
+			</ul><!-- /shots -->
+		</div>
+	</div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script src="js/libs/tempo.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- end scripts-->
+
+</body>
+</html>

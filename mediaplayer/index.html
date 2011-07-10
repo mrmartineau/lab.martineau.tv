@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 video player with Pure CSS icons & jQuery</title>
+	<!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />	
+	<meta name="author" content="Zander Martineau" />
+	<meta name="designer" content="Zander Martineau" />
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/style.css?v=1">
+	<link rel="stylesheet" type="text/css" href="mediaplayer.css" media="screen" />
+	<!-- JS -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js" type="text/javascript"></script>	
+	<script src="mediaplayer.js" type="text/javascript"></script>
+	
+</head>
+
+<body>
+	<header>
+		<div id="logo">Lab</div>
+		<nav id="main">
+			<ul class="group">
+				<li><a href="../card/" title="Card Experiment">CSS3 Card</a></li>
+				<li><a href="../mediaplayer/" title="HTML5 Mediaplayer" class="current">HTML5 Mediaplayer</a></li>
+				<li><a href="../cloze-generator/v1/" title="Cloze Test Generator">Cloze Test Generator</a></li>
+				<li><a href="../css-icons/" title="CSS Icons">CSS Icons</a></li>
+				<li><a href="../../dribbble/" title="Dribbble Wall">Dribbble Wall</a></li>
+			</ul>
+		</nav>
+		<div id="page_info">
+			<h1>HTML5 Mediaplayer<br />with jQuery &amp;<br />CSS icons</h1>
+		</div>
+		<div id="social">
+			<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="MrMartineau">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;">Bookmark this on Delicious</a>
+		</div>
+	</header>
+	<div id="container">
+		<div id="player_shell">
+			<div id="mediaplayer_wrapper">
+				<video width="640" height="360" id="video">
+				    <source src="http://mirror.cessen.com/blender.org/peach/trailer/trailer_400p.ogg" type='video/ogg; codecs="theora, vorbis"' />
+				    <source src="http://mirror.cessen.com/blender.org/peach/trailer/trailer_480p.mov" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+				    Your browser is not compatible with HTML 5, please upgrade it to Safari or Chrome.
+				</video>
+				<div id="seekbar"></div><!-- /seekbar -->
+				<div id="controls">
+					<div id="left_controls">
+						<button id="play" class="but"><span></span></button>
+						<button id="pause" class="but"><span></span><span></span></button>
+						<div id="volume" class="but">
+							<div id="vol_but">
+								<span class="speaker"></span>
+								<span class="speakerbox"></span>
+								<div id="sound_waves">							
+									<span class="lg_wave"></span>
+									<span class="sm_wave"></span>
+								</div><!-- /sound_waves -->
+							</div><!-- /vol_but -->
+							<div id="volume_slider">
+								<div id="slider"></div><!-- /slider -->
+								<input type="text" id="amount" value="10"/>
+							</div><!-- /volume_slider -->
+						</div><!-- /volume -->
+					</div><!-- /left_controls -->
+					<div id="play_info"></div><!-- /play_info -->
+					<div id="right_controls">
+						<div id="resize" class="but">
+							<div class="sm">
+								<span class="corner"></span>
+								<span class="arrow one"></span>
+								<span class="arrow two"></span>
+							</div>
+						</div><!-- /resize -->
+						<div id="maximise" class="but">
+							<div>
+								<span class="topleft"></span>
+								<span class="topright"></span>
+								<span class="bottomright"></span>
+								<span class="bottomleft"></span>
+							</div>
+						</div><!-- /maximise -->
+					</div><!-- /right_controls -->
+				</div><!-- /controls -->
+			</div><!-- /mediaplayer -->
+		</div><!-- /player_shell -->
+		<h3>Status:<br />
+			This is a work-in-progress. No images were harmed, all icons created with CSS shapes
+		</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div><!-- / #wrapper -->
+
+</body>
+</html>

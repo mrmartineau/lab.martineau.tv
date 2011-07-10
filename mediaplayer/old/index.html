@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Pure CSS & jQuery Mediaplayer</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />	
+	<meta name="author" content="Zander Martineau" />
+	<meta name="designer" content="Zander Martineau" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="mediaplayer.css" media="screen" />
+	<!-- JS -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js" type="text/javascript"></script>
+	
+	
+	<!--
+	<script type="text/javascript" src="ixedit/ixedit.packed.js"></script>
+	<link type="text/css" href="ixedit/ixedit.css" rel="stylesheet" />
+	<link type="text/css" href="sample-style/ui-sui.css" rel="stylesheet" />
+	-->	
+	
+	<script src="mediaplayer.js" type="text/javascript"></script>
+	
+</head>
+
+<body>
+	<div id="wrapper">
+		<h1>HTML 5, CSS & jQuery Mediaplayer</h1>
+		<h2>By Zander Martineau</h2>
+		<div id="player_shell">
+			<div id="mediaplayer_wrapper">
+				<div id="video">
+					<video id="film" height='320' poster='http://assets3.jilion.com/05072010142052/images/embed/sublime/video/poster.jpg' width='640' src="http://medias.jilion.com/sublimevideo/dartmoor.mov"></video>
+
+				</div><!-- /video -->
+				<div id="seekbar"></div><!-- /seekbar -->
+				<div id="controls">
+					<div id="left_controls">
+						<button id="play" class="but" onclick="video.play()"><span></span></button>
+						<!--div id="play" class="but">
+							<span></span>
+						</div>< /play -->
+						<button id="pause" class="but" onclick="video.pause()">
+							<span></span>
+							<span></span>
+						</button>
+						<!--div id="pause" class="but">
+							<span></span>
+							<span></span>
+						</div>< /pause -->
+						<div id="volume" class="but">
+							<div id="vol_but">
+								<span class="speaker"></span>
+								<span class="speakerbox"></span>
+								<div id="sound_waves">							
+									<span class="lg_wave"></span>
+									<span class="sm_wave"></span>
+								</div><!-- /sound_waves -->
+							</div><!-- /vol_but -->
+							<div id="volume_slider">
+								<div id="slider"></div><!-- /slider -->
+								<input type="text" id="amount" value="10"/>
+							</div><!-- /volume_slider -->
+						</div><!-- /volume -->
+					</div><!-- /left_controls -->
+					<div id="play_info">
+						0:03 / 0:55
+					</div><!-- /play_info -->
+					<div id="right_controls">
+						<div id="resize" class="but">
+							<div class="sm">
+								<span class="corner"></span>
+								<span class="arrow one"></span>
+								<span class="arrow two"></span>
+							</div>
+						</div><!-- /resize -->
+						<div id="maximise" class="but">
+							<div>
+								<span class="topleft"></span>
+								<span class="topright"></span>
+								<span class="bottomright"></span>
+								<span class="bottomleft"></span>
+							</div>
+						</div><!-- /maximise -->
+					</div><!-- /right_controls -->
+				</div><!-- /controls -->
+			</div><!-- /mediaplayer -->
+		</div><!-- /player_shell -->
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div><!-- / #wrapper -->
+
+</body>
+</html>

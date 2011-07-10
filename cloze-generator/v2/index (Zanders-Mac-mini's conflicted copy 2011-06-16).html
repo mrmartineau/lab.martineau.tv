@@ -1,0 +1,58 @@
+<!DOCTYPE html>   
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Cloze Test Generator by Zander Martineau</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="" />
+	<meta name="author" content="">
+	<!-- !CSS -->
+	<link rel="stylesheet" href="css/style.css?v=1">	
+	<!-- !Modernizr - All other JS at bottom -->
+	<script src="js/libs/modernizr-1.6.min.js"></script>
+	<script src="http://martineau.tv/stats/?js"></script>
+</head>
+<!-- !Body -->
+<body>
+	<div id="container">
+		<h1>Cloze creator</h1>
+		<label for="input">1. Paste in text</label>
+		<textarea id="input" autofocus></textarea>
+		<div class="group">
+			<div id="result">
+				<p>2. Click the words below that you want to hide</p>
+				<p><small>Click words only once</small></p>
+				<!-- <button id="#select">Select all text below</button> -->
+				<div id="result_content"></div>
+			</div><!-- /results -->
+			<div id="keywords">
+				<p>3. Keywords</p>
+				<p><small>Click again to remove from this list &amp; replace the words back into the main body of text.</small></p>
+				<div id="keyword_content"></div>
+				<button id="#random">Randomise</button>
+			</div><!-- /keywords -->
+		</div>
+		<footer>
+			<p><a href="http://en.wikipedia.org/wiki/Cloze_test" title="Cloze Test info">Cloze Test info</a> | Built by <a href="http://martineau.tv/">Zander Martineau</a></p>
+		</footer>
+	</div><!--!/#container -->
+	<!-- !Javascript -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script src="js/script.js?v=1"></script>
+	<script>
+		var _gaq = [['_setAccount', 'UA-621491-22'], ['_trackPageview']];
+		(function(d, t) {
+			var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+			g.async = true;
+			g.src = '//www.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g, s);
+		})(document, 'script');
+	</script>
+</body>
+</html>

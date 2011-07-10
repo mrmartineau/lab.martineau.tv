@@ -1,0 +1,347 @@
+/* ------------------------------------------------------- 
+  Base Stylesheet
+------------------------------------------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+nav ul { list-style: none }
+blockquote, q { quotes: none }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: middle }
+label, input[type=button], input[type=submit], button { cursor: pointer }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+/*------------------------------------------*/
+/*	Non-semantic helper classes */
+/*------------------------------------------*/
+/* for image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+/* Hide for both screenreaders and browsers */
+.hidden { display: none; visibility: hidden; } 
+/* Hide only visually, but have it available for screenreaders */
+.visuallyhidden { position: absolute !important;    
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+.group:after,section:after,.images:after,.row:after,.column:after  { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.group,section,.row,.column,.images { zoom: 1; }
+/*------------------------------------------*/
+/* MINIMAL BASE STYLES */
+/*------------------------------------------*/
+body{ background-color: #c6c6c6;
+		background-image: url(../images/noise.png);
+	}
+html { overflow-y: scroll;}
+a:hover, a:active { outline: none; }
+ul,ol { margin-left: 1.8em; }
+ol { list-style-type: decimal; }
+small { font-size: 11px; }
+strong, th { font-weight: bold; }
+td, td img { vertical-align: top; } 
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+pre { 
+		padding: 15px;
+		white-space: pre; /* CSS2 */
+		white-space: pre-wrap; /* CSS 2.1 */
+		white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+		word-wrap: break-word; /* IE */
+}
+textarea { overflow: auto; }.ie6 legend, .ie7 legend { margin-left: -7px; }
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+/* webkit browsers add a 2px margin outside the chrome of form elements */  
+button, input, select, textarea { margin: 0; }
+/* colors for form validity */
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid { 
+-webkit-border-radius: 1px;
+ -khtml-border-radius: 1px;
+   -moz-border-radius: 1px;
+		border-radius: 1px;
+   -moz-box-shadow: 0px 0px 5px red; 
+-webkit-box-shadow: 0px 0px 5px red; 
+		box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, 
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+button {  width: auto; overflow: visible; }
+/*------------------------------------------*/
+/*	Non-semantic helper classes */
+/*------------------------------------------*/
+/* for image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+/* Hide for both screenreaders and browsers */
+.hidden { display: none; visibility: hidden; } 
+/* Hide only visually, but have it available for screenreaders */
+.visuallyhidden { position: absolute !important;    
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+.group:after,section:after,.images:after,.row:after,.column:after  { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.group,section,.row,.column,.images { zoom: 1; }
+/*------------------------------------------*/
+/* TYPOGRAPHY */
+/*------------------------------------------*/
+body{
+		font: normal 14px/1.5 "Hoefler Text", "Palatino LT Std", "Palatino Linotype", "Adobe Garamond Pro", Garamond, Georgia, "Times New Roman", serif;
+-webkit-user-select:none;
+   -moz-user-select:none;
+	 -o-user-select:none;
+		user-select:none;
+	}
+body, select, input, textarea { 
+		color: #444;
+		/*text-shadow: #b1b1b1 0 0 13px;*/
+		/* text-shadow: #191919 0 -1px 4px; */
+	}
+body { font-size:100%; line-height:1.25; }
+h1, h2, h3 { margin-top:0; margin-bottom:0;
+		font-weight: normal;
+		font-style: normal;
+	}
+/*h1, h2, h3 { margin-top:0; margin-bottom:0; }
+h1 { font-size:4em; }
+h1, h2 { padding:1.25em 0; }
+h2 { font-size:3em; }
+h3 { font-size:1.16667em; padding:1.51786em 0; }*/
+
+/*------------------------------------------*/
+/* LINK STYLES */
+/*------------------------------------------*/
+a:link,a:visited{
+		color: #dc5f55;
+		text-decoration: none;
+		font-weight: bold;
+	}
+a:hover {color: #393939;}
+/*------------------------------------------*/
+/* CSS3 */
+/*------------------------------------------*/
+/*Transitions*/
+a {
+-webkit-transition: all 0.12s ease-in-out;
+   -moz-transition: all 0.12s ease-in-out;
+	 -o-transition: all 0.12s ease-in-out;
+		transition: all 0.12s ease-in-out;
+}
+/*------------------------------------------*/
+/* CARD */
+/*------------------------------------------*/
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#container {
+-webkit-animation: fade-in 2s 1 ease-in-out;
+   -moz-animation: fade-in 2s 1 ease-in-out;
+		animation: fade-in 2s 1 ease-in-out;
+}
+#container {
+	/* the container divs are given a -webkit-perspective of 1000 to add some realism to the flip motion, otherwise it all seems a little flat. */
+-webkit-perspective: 1600;
+		width: 800px;
+		height: 500px;
+		position: absolute;
+		top: 50%;
+		margin-top: -250px;
+		margin-left: -400px;
+		left: 50%;
+	}
+#card {
+		width: 800px;
+		height: 500px;
+		margin: 0 auto;
+-webkit-transform-style: preserve-3d;
+		position: relative;
+		clear: both;
+	}
+.no-csstransforms3d #message {
+		width: 530px;
+		margin-right: auto;
+		margin-left: auto;
+		font-size: .8em;
+		text-align: center;
+		position: relative;
+		top: 16px;
+		background-color: #fefeff;
+		padding: 5px;
+		line-height: 1.5;
+	}
+.csstransforms3d #message {
+		display: none;
+	}
+/*------------------------------------------*/
+/* FRONT */
+/*------------------------------------------*/
+#front,#inside {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 800px;
+		height: 500px;
+	}
+#front,#inside,#message,#info {
+-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+-webkit-border-radius: 3px;
+ -khtml-border-radius: 3px;
+   -moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+#front {
+		position: absolute;
+		z-index: 1;
+-webkit-transform-origin:50% 0;
+		background-image: url(../images/front_image.jpg);
+/*-webkit-transform: rotateX(73deg);*/
+	}
+#front:target {
+-webkit-transition: 0.5s ease-in-out;
+-webkit-transform: rotateX(73deg);
+	}
+#card:target #front{
+-webkit-transition: 0.5s ease-in-out;
+-webkit-transform: rotateX(0deg);
+	}
+#front h1 {
+		position: absolute;
+		top: 31px;
+		left: 98px;
+		color: #f13557;
+		font-size: 3em;
+		font-style: italic;
+		font-weight: normal;
+	}
+.no-csstransforms3d #front a,.no-csstransforms3d #showinfo { 
+		display: none;
+	}
+/*------------------------------------------*/
+/* INSIDE */
+/*------------------------------------------*/
+#inside {
+		background-color: #f6f6f6;
+	}
+#inside .content { 
+		position: absolute;
+		top: 220px;
+		left: 200px;
+		text-align: center;
+		width: 400px;
+		line-height: 2.5;
+		font-size: 1.3em;
+	}
+#card a {
+		position: absolute;
+		right: 10px;
+		font-weight: normal;
+		font-style: normal;
+		color: #fff;
+		bottom: 10px;
+		display: block;
+		background-color: #f13557;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+-webkit-border-radius: 50px;
+ -khtml-border-radius: 50px;
+   -moz-border-radius: 50px;
+		border-radius: 50px;
+		line-height: 50px;
+	}
+#card a:hover {
+		background-color: #922034;
+	}
+
+/*------------------------------------------*/
+/* BACK */
+/*------------------------------------------*/
+#back { 
+-webkit-transform-style: preserve-3d;
+		width: 400px;
+		height: 250px;
+		left: 200px;
+		position: absolute;
+		top: 125px;
+	}
+#info { 
+-webkit-transition:1s ease-in-out;
+-webkit-backface-visibility: hidden;
+-webkit-transform: rotateX(-100deg);
+-webkit-transform-origin:0 100%;
+		background-color: #fff;
+		width: 800px;
+		height: 500px;
+		position: absolute;
+		top: -125px;
+		left: -200px;
+	}
+#info div {
+		padding-top: 40px;
+		width: 700px;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		background: ;
+		font: .7em "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+	}
+figure {
+		position: absolute;
+		width: 240px;
+		top: 265px;
+	}
+figcaption {
+		color: #bbb;
+	}
+#them {
+		left: 50px;
+		text-align: left;
+	}
+#us {
+		right: 50px;
+		text-align: right;
+	}
+#info:target {
+	-webkit-transform: rotateX(0deg);
+		z-index: 300;
+	}
+#back:target #info {
+-webkit-transform: rotateX(-100deg);
+	}
+#showinfo {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		font-weight: normal;
+		font-style: normal;
+		font-size: .8em;
+		left: 10px;
+		text-align: center;
+		color: #f3f3f3;
+	}
+#showinfo a{
+		text-shadow: none;
+		font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+		color: #f3f3f3;
+	}
