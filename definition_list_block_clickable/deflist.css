@@ -1,0 +1,33 @@
+/* @override http://rathersplendid.net/labs/definition_list_block_clickable/deflist.css */
+
+body {
+	background-color: #fff; font: 16px Helvetica, Arial; color: #000;
+	padding-top: 20px;
+}
+a {
+	font-weight: bold;
+	color: #354549;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+dl {
+	width: 200px;
+	margin: 0 auto;
+}
+dt, dd {
+	background-color: silver;
+	padding: 10px;
+}
+dd {
+	margin-left: 0;
+	margin-bottom: 10px;
+}
+dd:hover,dt:hover,.hover,.hover a,dt:hover a {
+	background-color: #9f9f9f;
+	color: #fff;
+}
+/* Make dt link be underlined on hover */
+.hover a, dt:hover a, a:hover {
+	border-bottom: 1px solid white;
+	
+}

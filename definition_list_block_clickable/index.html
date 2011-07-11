@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/* Definition List Block Clickable */
+		$("#defList dd").click(function(){
+	  		window.location=$(this).prev().find("a").attr("href"); return false;
+	  	});
+	  	var linkTitle = $('dt a').attr("title");
+	  	/*
+var linkTitle = $('dd').prev(
+	  		function() {
+	  			$('dt a').attr("title");
+	  		}	  	
+	  	);
+*/
+	  	/* Add .hover class to the next dd when dt is hovered over */
+		$('#defList dt').hover(function() {
+			$(this).next().addClass('hover').css({'cursor' : 'pointer'});			
+			$(this).attr({title : linkTitle});
+		}, function() {
+		    $(this).next().removeClass('hover');
+		});
+		/* Add .hover class to previous dt when dd is hovered over */
+		$('#defList dd').hover(function() {
+			$(this).prev().addClass('hover').css({'cursor' : 'pointer'});
+			$(this).attr({title : linkTitle});
+		}, function() {
+		    $(this).prev().removeClass('hover');
+		});
+
+		
+	});
+</script>
+<title>Definition List Block Clickable</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="deflist.css" media="screen" />
+</head>
+<body>
+	<dl id="defList">
+		<dt><a href="http://martineau.tv/portfolio/" title="Zander's Portfolio">Zander's Portfolio</a></dt>
+		<dd>Design and development for the iPhone and other smartphones to video based websites.</dd>
+		<dt><a href="http://jquerystyle.com" title="jQuery Style">jQuery Style</a></dt>
+		<dd>jQuery Style is a personal project aimed at web designers and developers. It is a showcase of websites that use jQuery in interesting ways.</dd>
+		<dt><a href="http://rathersplendid.net/" title="Rather Splendid">The 'Rather Splendid' Blog</a></dt>
+		<dd>Pontifications, ponderings, photography and much more. Click here to read my blog.</dd>
+	</dl>    
+</body>
+</html>
