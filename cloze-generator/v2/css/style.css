@@ -1,12 +1,9 @@
 /* @override http://localhost/cloze-generator/css/style.css?v=1 */
-/* ------------------------------------------------------- 
+/* -------------------------------------------------------
   Base Stylesheet
 ------------------------------------------------------- */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
-nav ul { list-style: none }
-blockquote, q { quotes: none }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
 ins { background-color: #ff9; color: #000; text-decoration: none; }
 mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
@@ -15,7 +12,6 @@ abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
 /* tables still need cellspacing="0" in the markup */
 table { border-collapse: collapse; border-spacing: 0; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-input, select { vertical-align: middle }
 label, input[type=button], input[type=submit], button { cursor: pointer }
 .ie7 img { -ms-interpolation-mode: bicubic; }
 /*------------------------------------------*/
@@ -24,9 +20,9 @@ label, input[type=button], input[type=submit], button { cursor: pointer }
 /* for image replacement */
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
 /* Hide for both screenreaders and browsers */
-.hidden { display: none; visibility: hidden; } 
+.hidden { display: none; visibility: hidden; }
 /* Hide only visually, but have it available for screenreaders */
-.visuallyhidden { position: absolute !important;    
+.visuallyhidden { position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px); }
 /* Hide visually and from screenreaders, but maintain layout */
@@ -44,10 +40,10 @@ ul,ol { margin-left: 1.8em; }
 ol { list-style-type: decimal; }
 small { font-size: 13px; color: #999999; }
 strong, th { font-weight: bold; }
-td, td img { vertical-align: top; } 
+td, td img { vertical-align: top; }
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
-pre { 
+pre {
 		padding: 15px;
 		white-space: pre; /* CSS2 */
 		white-space: pre-wrap; /* CSS 2.1 */
@@ -60,23 +56,15 @@ input[type="checkbox"] { vertical-align: bottom; }
 .ie7 input[type="checkbox"] { vertical-align: baseline; }
 .ie6 input { vertical-align: text-bottom; }
 label, input[type=button], input[type=submit], button { cursor: pointer; }
-/* webkit browsers add a 2px margin outside the chrome of form elements */  
+/* webkit browsers add a 2px margin outside the chrome of form elements */
 button, input, select, textarea { margin: 0; }
-/* colors for form validity */
-input:valid, textarea:valid   {  }
-input:invalid, textarea:invalid { 
--webkit-border-radius: 1px;
- -khtml-border-radius: 1px;
-   -moz-border-radius: 1px;
-		border-radius: 1px;
-   -moz-box-shadow: 0px 0px 5px red; 
--webkit-box-shadow: 0px 0px 5px red; 
-		box-shadow: 0px 0px 5px red;
-}
-.no-boxshadow input:invalid, 
+
+
+
+.no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 ::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #FF5E99; }
 button {  width: auto; overflow: visible; }
 /*------------------------------------------*/
@@ -85,9 +73,9 @@ button {  width: auto; overflow: visible; }
 /* for image replacement */
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
 /* Hide for both screenreaders and browsers */
-.hidden { display: none; visibility: hidden; } 
+.hidden { display: none; visibility: hidden; }
 /* Hide only visually, but have it available for screenreaders */
-.visuallyhidden { position: absolute !important;    
+.visuallyhidden { position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px); }
 /* Hide visually and from screenreaders, but maintain layout */
@@ -101,7 +89,7 @@ button {  width: auto; overflow: visible; }
 body{
 		font: 14px/1.5 Georgia, "Times New Roman", Times, serif;
 	}
-body, select, input, textarea { 
+body, select, input, textarea {
 		color: #444;
 		/*text-shadow: #b1b1b1 0 0 13px;*/
 		/* text-shadow: #191919 0 -1px 4px; */
@@ -148,7 +136,7 @@ a {
 		height: 150px;
 		width: 870px;
 		font: .85em/1.3em Georgia, "Times New Roman", Times, serif;
-	}
+}
 #result, #keywords {
 		float:left;
 		border-top: 3px solid #ddd;
@@ -157,7 +145,7 @@ a {
 #result {
 		width: 65%;
 		margin-right: 5%;
-		
+
 }
 #input, #result div, #keywords div {
 		border: 1px solid #ddd;
@@ -175,8 +163,23 @@ a {
 		background-color: #c7c7c7;
 		cursor: pointer;
 }
-footer { 
+footer {
 		text-align: center;
 		margin-top: 30px;
 		font-size: 0.8em;
-	}
+}
+
+.success {
+	color: green;
+}
+
+.error {
+	color: red;
+}
+
+input[type=text] {
+	padding: none;
+	border: none;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1em;
+}
